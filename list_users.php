@@ -41,6 +41,7 @@ $users = $userModel->getUsers($params);
                         <tr>
                             <th scope="row"><?php echo $user['id']?></th>
                             <td>
+                                <!-- <?php echo htmlspecialchars($user['name'], ENT_QUOTES, 'UTF-8'); ?> -->
                                 <?php echo $user['name']?>
                             </td>
                             <td>
@@ -50,7 +51,7 @@ $users = $userModel->getUsers($params);
                                 <?php echo $user['type']?>
                             </td>
                             <td>
-                                <a href="form_user.php?id=<?php echo $user['id'] ?>">
+                                <a href="form_user.php?id=<?php echo (!empty($id)) ? $id : $user['id']; ?>">
                                     <i class="fa fa-pencil-square-o" aria-hidden="true" title="Update"></i>
                                 </a>
                                 <a href="view_user.php?id=<?php echo $user['id'] ?>">

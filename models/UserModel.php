@@ -59,6 +59,21 @@ class UserModel extends BaseModel {
         return $user;
     }
 
+    //public function updateUser($input) {
+        //     // Escape các giá trị trước khi chèn vào truy vấn SQL
+        //     $name = htmlspecialchars(mysqli_real_escape_string(self::$_connection, $input['name']), ENT_QUOTES, 'UTF-8');
+        //     $password = htmlspecialchars(mysqli_real_escape_string(self::$_connection, md5($input['password'])), ENT_QUOTES, 'UTF-8');
+        //     $id = intval($input['id']); // Chuyển đổi id thành số nguyên
+        
+        //     // Tạo truy vấn SQL với các giá trị đã được escape
+        //     $sql = "UPDATE users SET name='$name', password='$password' WHERE id=$id";
+        
+        //     // Thực hiện truy vấn
+        //     $user = $this->update($sql);
+        
+        //     return $user;
+        // }
+
     /**
      * Insert user
      * @param $input
